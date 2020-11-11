@@ -176,7 +176,7 @@ INSERT INTO users (first_name, last_name, email, password, location, dept, is_ad
 #### OR,
 > inserting data to all the fields present
 ```sql
-INSERT INTO users  values ('Brad', 'Traversy', 'brad@gmail.com', '123456','Massachusetts', 'development', 1, now());
+INSERT INTO users  values ('Braxx', 'Tesnsion', 'brax@gmail.com', '123456','Massachusetts', 'development', 1, now());
 ```
 
 ## Insert Multiple Rows
