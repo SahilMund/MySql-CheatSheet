@@ -3,6 +3,7 @@
 <h1> SQL & MySQL </h1>
 <img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTrCipdO1fn3ZHhw0giL1pstXuUgo_DUV8Dng&usqp=CAU"/>
 </div>
+
 ### What is database ?
 > It is a collection of Data(or information) stored in a format that can easily be accessed.
 
@@ -75,9 +76,9 @@ SQL is used for writing queries for databases, MySQL facilitates data storing, m
 
 -   Redundancy − Storing data twice, redundantly to make the system faster.
 
--  Primary Key − A primary key is unique. A key value can not occur twice in one table. With a key, you can only find one row.
+-   Primary Key − A primary key is unique. A key value can not occur twice in one table.The primary key uniquely identifies each record in a table.
 
--   Foreign Key − A foreign key is the linking pin between two tables.
+-   Foreign Key − A foreign key is used to link two tables togather.it is a filed in one table that refers to the primary key in another table.
 
 -   Compound Key − A compound key (composite key) is a key that consists of multiple columns, because one column is not sufficiently unique.
 
@@ -86,7 +87,7 @@ SQL is used for writing queries for databases, MySQL facilitates data storing, m
 -   Referential Integrity − Referential Integrity makes sure that a foreign key value always points to an existing row.
 
 ### MySQL Database
-  MySQL is a fast, easy-to-use RDBMS being used for many small and big businesses. MySQL is developed, marketed and supported by MySQL AB, which is a Swedish company. MySQL is becoming so popular because of many good reasons :-
+ MySQL is a fast, easy-to-use RDBMS being used for many small and big businesses. MySQL is developed, marketed and supported by MySQL AB, which is a Swedish company. MySQL is becoming so popular because of many good reasons :-
 
 -   MySQL is released under an open-source license. So you have nothing to pay to use it.
 
@@ -108,5 +109,4 @@ SQL is used for writing queries for databases, MySQL facilitates data storing, m
 ### What is NULL value ?
 NULL means the value is unknown ,it is not Zero.
 
-### Foreign Key
-<img src="https://raw.githubusercontent.com/SahilMund/MySql-CheatSheet/master/img/feky.jpg" alt="" />
+
