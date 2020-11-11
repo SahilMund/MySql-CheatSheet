@@ -239,25 +239,25 @@ SELECT * FROM users ORDER BY last_name DESC;
 - CHAR_LENGTH( )
 - LACSE() & UCASE( )
 
-1.	 Concatenate Columns using CONACT() Function
+### 1.Concatenate Columns using CONACT() Function
 
 ```sql
 SELECT CONCAT(first_name, ' ', last_name) AS 'Name', dept FROM users;
 
 ```
 
-2.	 Reverse() Function
+### 2.Reverse() Function
 
 ```sql
 SELECT REVERSE(first_name) from users
 ```
 
-3.	 CHAR_LENGTH() Function
+### 3. CHAR_LENGTH() Function
 
 ```sql
 SELECT CHAR_LENGTH(first_name) from users
 ```
-4.	 LACSE() & UCASE() Function
+### 4.LACSE() & UCASE() Function
 ```sql
 SELECT UCASE(first_name), LCASE(last_name) FROM users;
 ```
