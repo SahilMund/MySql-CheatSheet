@@ -4,8 +4,8 @@
 
 ## MySQL Locations
 * Mac             */usr/local/mysql/bin*
-* Windows         */Program Files/MySQL/MySQL _version_/bin*( c:\xampp\mysql\bin)
-* Xampp           */xampp/mysql/bin*
+* Windows         */Program Files/MySQL/MySQL _version_/bin*
+* Xampp           */xampp/mysql/bin*  
 
 ## Add mysql to your PATH
 
@@ -85,14 +85,21 @@ CREATE DATABASE acme;
 DROP DATABASE acme;
 ```
 
-## Select Database
+## Select Database 
 
 ```sql
 USE acme;
 ```
 
-## Create Table
 
+## To Check The Current Database 
+
+```sql
+SELECT DATABASE();
+```
+
+## Create Table
+> Creating table without default value
 ```sql
 CREATE TABLE users(
 id INT AUTO_INCREMENT,
@@ -107,6 +114,23 @@ id INT AUTO_INCREMENT,
    PRIMARY KEY(id)
 );
 ```
+> creating table with default values
+
+```sql
+CREATE TABLE users(
+id INT AUTO_INCREMENT,
+   first_name VARCHAR(100) DEFAULT 'Sahil',
+   last_name VARCHAR(100) DEFAULT 'Mund',
+   email VARCHAR(50),
+   password VARCHAR(20),
+   location VARCHAR(100),
+   dept VARCHAR(100),
+   is_admin TINYINT(1),
+   register_date DATETIME,
+   PRIMARY KEY(id)
+);
+```
+
 
 ## Delete / Drop Table
 
@@ -120,10 +144,39 @@ DROP TABLE tablename;
 SHOW TABLES;
 ```
 
+## Describe The List of Column Definitions Of The table.
+- first approach :-
+```sql
+DESC <tablename>;
+```
+
+- second approach :-
+```sql
+SHOW columns from <tablename>;
+```
+## Show Warnings
+
+```sql
+SHOW WARNINGS;
+```
+
+
+## Show Errors
+
+```sql
+SHOW ERRORS;
+```
+
 ## Insert Row / Record
 
 ```sql
 INSERT INTO users (first_name, last_name, email, password, location, dept, is_admin, register_date) values ('Brad', 'Traversy', 'brad@gmail.com', '123456','Massachusetts', 'development', 1, now());
+```
+
+#### OR,
+> inserting data to all the fields present
+```sql
+INSERT INTO users  values ('Brad', 'Traversy', 'brad@gmail.com', '123456','Massachusetts', 'development', 1, now());
 ```
 
 ## Insert Multiple Rows
@@ -174,17 +227,40 @@ ALTER TABLE users MODIFY COLUMN age INT(3);
 ```
 
 ## Order By (Sort)
+> By default it is set to ASC i.e. Ascending Order
 
 ```sql
 SELECT * FROM users ORDER BY last_name ASC;
 SELECT * FROM users ORDER BY last_name DESC;
 ```
+# Sting Functions 
+- CONACT()
+- REVERSE()
+- CHAR_LENGTH()
+- LACSE() & UCASE()
 
-## Concatenate Columns
+## Concatenate Columns using CONACT() Function
 
 ```sql
 SELECT CONCAT(first_name, ' ', last_name) AS 'Name', dept FROM users;
 
+```
+
+## Reverse() Function
+
+```sql
+SELECT REVERSE(first_name) from users
+```
+
+## CHAR_LENGTH() Function
+
+```sql
+SELECT CHAR_LENGTH(first_name) from users
+```
+
+## LACSE() & UCASE() Function
+```sql
+SELECT UCASE(first_name), LCASE(last_name) FROM users;
 ```
 
 ## Select Distinct Rows
@@ -194,14 +270,26 @@ SELECT DISTINCT location FROM users;
 
 ```
 
+
+
 ## Between (Select Range)
 
 ```sql
 SELECT * FROM users WHERE age BETWEEN 20 AND 25;
 ```
+> without using Between we can also run this query :-
+
+```sql
+SELECT * FROM users WHERE age <= 20 && age >= 25;
+```
+## Not Between
+
+```sql
+SELECT * FROM users WHERE age NOT BETWEEN 20 AND 25;
+```
 
 ## Like (Searching)
-
+> searching for a specified pattern in a column
 ```sql
 SELECT * FROM users WHERE dept LIKE 'd%';
 SELECT * FROM users WHERE dept LIKE 'dev%';
@@ -219,6 +307,18 @@ SELECT * FROM users WHERE dept NOT LIKE 'd%';
 
 ```sql
 SELECT * FROM users WHERE dept IN ('design', 'sales');
+```
+
+> without using IN we can also run this query :-
+
+```sql
+SELECT * FROM users WHERE dept = 'design' or dept ='sales';
+```
+
+## LIMIT
+
+```sql
+SELECT fname FROM LIMIT 3 ;
 ```
 
 ## Create & Remove Index
@@ -311,13 +411,13 @@ ORDER BY posts.title;
 ```
 
 ## Aggregate Functions
-
+> COUNT() , MAX() , MIN() , AVG() ,SUM() etc
 ```sql
 SELECT COUNT(id) FROM users;
 SELECT MAX(age) FROM users;
 SELECT MIN(age) FROM users;
+SELECT AVG(age) FROM users;
 SELECT SUM(age) FROM users;
-SELECT UCASE(first_name), LCASE(last_name) FROM users;
 
 ```
 
