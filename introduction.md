@@ -110,3 +110,5 @@ SQL is used for writing queries for databases, MySQL facilitates data storing, m
 NULL means the value is unknown ,it is not Zero.
 
 
+### MYSQL COMMANDS
+<img alt="" src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190826175059/Types-of-SQL-Commands.jpg" />
