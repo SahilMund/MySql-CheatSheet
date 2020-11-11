@@ -4,7 +4,7 @@
 
 ## MySQL Locations
 * Mac             */usr/local/mysql/bin*
-* Windows         */Program Files/MySQL/MySQL _version_/bin*
+* Windows         */Program Files/MySQL/MySQL _version_/bin*( c:\xampp\mysql\bin)
 * Xampp           */xampp/mysql/bin*
 
 ## Add mysql to your PATH
@@ -19,9 +19,9 @@ echo 'export PATH="/usr/local/mysql/bin:$PATH"' >> ~/.bash_profile
 On Windows - https://www.qualitestgroup.com/resources/knowledge-center/how-to-guide/add-mysql-path-windows/
 
 ## Login
-
+Type this in cmd in c:\xampp\mysql\bin
 ```bash
-mysql -u root -p
+mysql -u root -p -h localhost
 ```
 
 ## Show Users
