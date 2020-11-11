@@ -103,3 +103,10 @@ SQL is used for writing queries for databases, MySQL facilitates data storing, m
 -   MySQL supports large databases, up to 50 million rows or more in a table. The default file size limit for a table is 4GB, but you can increase this (if your operating system can handle it) to a theoretical limit of 8 million terabytes (TB).
 
 -   MySQL is customizable. The open-source GPL license allows programmers to modify the MySQL software to fit their own specific environments.
+
+
+### What is NULL value ?
+NULL means the value is unknown ,it is not Zero.
+
+### Foreign Key
+<img src="https://raw.githubusercontent.com/SahilMund/MySql-CheatSheet/master/img/feky.jpg" alt="" />
