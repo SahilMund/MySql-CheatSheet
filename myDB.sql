@@ -1,0 +1,1 @@
+-- extension can be .sql or .mysql
